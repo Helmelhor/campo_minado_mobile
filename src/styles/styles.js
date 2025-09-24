@@ -8,4 +8,9 @@ export default StyleSheet.create({
     justifyContent: 'flex-start',
     paddingTop: 98,
   },
+  centralizado: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });

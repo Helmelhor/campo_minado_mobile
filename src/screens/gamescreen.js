@@ -3,6 +3,7 @@ import { View, Text, Alert } from 'react-native';
 import Board from '../components/board';
 import Header from '../components/header';
 import { createBoard, checkWin, checkLose } from '../logic/gamelogic';
+import styles from '../styles/styles';
 
 const ROWS = 10;
 const COLS = 10;
@@ -40,7 +41,7 @@ export default function GameScreen() {
   }, [win, gameOver]);
 
   return (
-    <View>
+    <View style={styles.centralizado}>
       <Header minesLeft={minesLeft} onRestart={handleRestart} win={win} gameOver={gameOver} />
       <Board board={board} setBoard={setBoard} gameOver={gameOver} win={win} />
       <Text style={{textAlign: 'center', margin: 8}}>
